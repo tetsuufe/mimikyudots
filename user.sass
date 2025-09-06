@@ -1,0 +1,83 @@
+// the stuff you see at home
+@use 'cards'
+// the thing you see when you're connected to a device
+@use 'connectbar'
+// right click
+@use 'contextmenu'
+// bottom left
+@use 'cover'
+// deleting confirmation
+@use 'delete'
+// bottom of the screen, playback duration
+@use 'duration'
+// gradient removal
+@use 'gradient'
+// home screen
+@use 'home'
+// lyrics screen
+@use 'lyrics'
+// left hand side navigator
+@use 'navigator'
+// general notifications
+@use 'notif'
+// playlist screen
+@use 'playlist'
+// profile screen
+@use 'profile'
+// add repeated song notification
+@use 'repeatadd'
+// right hand side, friends etc.
+@use 'rightbar'
+// the playlists you see on the left hand side
+@use 'rootlist'
+// the new save a song instead of just liking it
+@use 'save'
+// search bar on top
+@use 'search'
+// settings page
+@use 'settings'
+// shadow removal
+@use 'shadow'
+// tracks in a playlist page styling
+@use 'tracks'
+
+
+// Main color of text
+:root
+	--spice-rgb-selected-row: var(--spice-text)
+
+// Chill out with the scrolling
+#main
+	overflow: hidden
+
+// Subdued text color is normal
+.encore-dark-theme, .encore-light-theme, .encore-inverted-light-set
+	--text-subdued: var(--spice-text)
+	--essential-subdued: var(--spice-text)
+	--background-highlight: var(--spice-selected-row) !important
+
+// Notifications no seperator
+div[data-testid="infinite-scroll-list"] hr
+	display: none
+
+// Make scrollbar transparent
+.os-scrollbar
+	opacity: 0 !important
+
+// Don't show top bar backgrounds
+.main-topBar-background
+	background-color: var(--spice-main) !important
+
+// Change reading prompt background
+div[aria-label="Already added"] > div
+	background-color: var(--spice-main)
+	color: var(--spice-text)
+
+// Change "Add anyway" color
+div[aria-label="Already added"] > div > div > button.main-button-tertiary
+	background-color: var(--spice-text)
+	color: var(--spice-main)
+
+// Vim key background
+span.vim-key
+	background-color: var(--spice-selected-row)
