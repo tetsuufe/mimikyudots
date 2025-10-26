@@ -1,0 +1,8 @@
+font=Noto Sans
+background-color=#28282888
+text-color=#e2cca9ff
+border-color=#1b1b1b88
+border-radius=3
+progress-color=over #e78a4eee
+default-timeout=1500
+max-visible=5
